@@ -1,0 +1,31 @@
+.create-task{
+    margin-top: 60px;
+    background-image: url(/assets/images/users.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    width: 100%;
+    background-size: cover;
+    display: grid;
+    /* justify-content: center; */
+    /* align-items: center; */
+    padding: 40px;
+    margin: 0px auto;
+    /* text-align: center; */
+    justify-content: center;
+    .btn-submit{
+        width: 192px;
+        border-radius: 300px;
+        background-color: orangered;
+        color: white;
+        transition: all 1s ease-out;
+      }
+      .btn-submit:hover{
+          background-color: white;
+          color: #000;
+          border: 2px solid green;
+      }
+      .task-group{
+        width: 600px;
+      }
+}

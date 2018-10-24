@@ -1,0 +1,30 @@
+.task-list {
+  margin-top: 60px;
+  background-image: url(/assets/images/users.jpg);
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+  width: 100%;
+  background-size: cover;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0px auto;
+  padding-top: 30px;
+
+  .task-list_header {
+    text-transform: capitalize;
+  }
+
+  .task-group {
+    width: 400px;
+    display: flex;
+    margin: 20px 0px;
+    align-items: center;
+  }
+
+  .task-textarea {
+    margin-left: 16px;
+  }
+}

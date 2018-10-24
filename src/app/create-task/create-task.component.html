@@ -1,0 +1,26 @@
+<div class="create-task">
+  <div class="create-task_header">
+    <h2>Create New Task </h2>
+  </div>
+  <div class="create-task_form">
+    <form [formGroup]="addForm" (ngSubmit)="submitTask()">
+      <div class="form-group task-group">
+        <label for="title">Title:</label>
+        <input type="text" class="form-control" formControlName="title" id="title">
+        <div *ngIf="submitted && loginForm.controls.title.errors" class="error">
+          <div *ngIf="loginForm.controls.title.errors.required">Title is required</div>
+        </div>
+      </div>
+      <div class="form-group task-group">
+        <label for="description">Description:</label>
+        <textarea class="form-control" formControlName="description" id="description"  rows="5" id="description"></textarea>
+        <div *ngIf="submitted && loginForm.controls.description.errors" class="error">
+            <div *ngIf="loginForm.controls.description.errors.required">Description is required</div>
+          </div>
+      </div>
+      <button class="btn btn-default btn-submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+  

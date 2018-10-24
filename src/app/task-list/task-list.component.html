@@ -1,0 +1,19 @@
+<div class="task-list" *ngFor="let task of tasks">
+  <div class="task-list_header">
+    <span>{{task.title}}</span>
+  </div>
+  <div class="task-list_description">
+    <p>{{task.description}}</p>
+  </div>
+  <div class="task-list_attachment">
+    <span>Attachments</span>
+  </div>
+  <form>
+      <div class="form-group task-group">
+          <label class="text-icon">
+              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+          </label>
+          <textarea class="form-control task-textarea" rows="1" id="description"></textarea>
+        </div>
+  </form>
+</div>

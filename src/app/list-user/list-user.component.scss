@@ -1,0 +1,17 @@
+.list-user{
+    margin-top: 60px;
+    background-image: url('/assets/images/users.jpg');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    width: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .user-button{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+}

@@ -1,0 +1,42 @@
+.main-login {
+  margin-top: 60px;
+  background-image: url('/assets/images/users.jpg');
+  background-repeat: no-repeat;
+  width: 100%;
+  background-size: cover;
+
+  .main-login_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: 4.0rem;
+      font-weight: 800;
+      font-family: 'Satisfy', cursive;
+      color: #16334e;
+      line-height: 1;
+      margin-bottom: 112px;
+      margin-top: 60px;
+    }
+  }
+  .login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 50px;
+  }
+  .btn-login{
+    width: 192px;
+    border-radius: 300px;
+    background-color: orangered;
+    color: white;
+    transition: all 1s ease-out;
+  }
+  .btn-login:hover{
+      background-color: white;
+      color: #000;
+      border: 2px solid green;
+  }
+}
