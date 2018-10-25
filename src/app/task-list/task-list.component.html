@@ -1,19 +1,77 @@
-<div class="task-list" *ngFor="let task of tasks">
-  <div class="task-list_header">
-    <span>{{task.title}}</span>
-  </div>
-  <div class="task-list_description">
-    <p>{{task.description}}</p>
-  </div>
-  <div class="task-list_attachment">
-    <span>Attachments</span>
-  </div>
-  <form>
-      <div class="form-group task-group">
-          <label class="text-icon">
-              <i class="fa fa-user-circle-o" aria-hidden="true"></i>
-          </label>
-          <textarea class="form-control task-textarea" rows="1" id="description"></textarea>
+
+
+<div class="container task-list">
+    <div class="row">
+        <div class="col-sm-8">
+            <div class="panel panel-white post panel-shadow" *ngFor="let task of tasks">
+                <div class="post-heading"> 
+                    <div class="pull-left meta">
+                        <div class="title h4">
+                            <a href="#"><b>{{task.title}}</b></a>
+                        </div>
+                        <h6 class="text-muted time">1 minute ago</h6>
+                    </div>
+                </div> 
+                <div class="post-description"> 
+                    <p>{{task.description}}</p>
+                    <div class="stats">
+                        <a  class="btn btn-default stat-item">
+                            <i class="fa fa-thumbs-up icon" (click)="likeButtonClick()"></i>{{numberOflikes}}
+                        </a>
+                      
+                        <a class="btn btn-default stat-item">
+                            <i class="fa fa-thumbs-down icon" (click)="dislikeButtonClick()"></i>
+                        </a>
+                        <a  class="btn btn-default stat-item">
+                        <i class="fa fa-trash" aria-hidden="true" (click)="deleteTask(task)"></i>
+                        </a>
+                    </div>
+                </div>
+                <form class="post-form" [formGroup]="addForm" (ngSubmit)="addComments(task.id)">
+                
+                    <div class="form-group task-group">
+                      <div class="form-group">
+                        <label class="">Author</label>
+                        <input type="text" class="form-control" formControlName="author" id="author" />
+                      </div>
+                      <div class="form-group">
+                          <label class="">Comments</label>
+                        <textarea class="form-control task-textarea" rows="1" formControlName="description" id="description" ></textarea>
+                      </div>
+                    </div>
+                    <button class="btn btn-default btn-submit">Submit</button>
+                  </form>
+            </div>
         </div>
-  </form>
+        <div class="col-sm-8">
+            <div class="panel panel-white post panel-shadow" *ngFor="let comment of comments">
+                <div class="post-heading">
+                    <div class="pull-left image">
+                        <img src="http://bootdey.com/img/Content/user_1.jpg" class="img-circle avatar" alt="user profile image">
+                    </div>
+                    <div class="pull-left meta">
+                        <div class="title h5">
+                            <a ><b>{{comment.author}}</b></a>
+                            made a post.
+                        </div>
+                        <h6 class="text-muted time">1 minute ago</h6>
+                    </div>
+                </div> 
+                <div class="post-description"> 
+                    <p>{{comment.description}}</p>
+                    <div class="stats">
+                        <a class="btn btn-default stat-item">
+                            <i class="fa fa-thumbs-up icon" (click)="likeButtonClick()"></i>{{numberOflikes}}
+                        </a>
+                        <a  class="btn btn-default stat-item">
+                            <i class="fa fa-thumbs-down icon" (click)="dislikeButtonClick()"></i>
+                        </a>
+                        <a  class="btn btn-default stat-item">
+                            <i class="fa fa-trash" aria-hidden="true" (click)="deleteComment(comment)"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

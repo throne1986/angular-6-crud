@@ -21,6 +21,7 @@ import { UserService } from './service/user.service';
 import {HttpClientModule} from '@angular/common/http';
 import { CreateTaskComponent } from './create-task/create-task.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { LikesComponent } from './likes/likes.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { TaskListComponent } from './task-list/task-list.component';
     ListUserComponent,
     CreateTaskComponent,
     TaskListComponent,
+    LikesComponent,
   ],
   imports: [
     BrowserModule,
